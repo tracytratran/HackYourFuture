@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      id="viewport-meta"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>☕ Event Page Technical Task</title>
+  </head>
+  <body>
+    <header class="flex-row justify-between items-center">
+      <!-- <h2>LOGO</h2> -->
+      <button onclick="showAlert()"></button>
+
+      <img
+        src="icon/nav-menu.png"
+        alt="Navigation menu"
+        width="32"
+        height="32"
+        id="toggle-button"
+      />
+      <nav class="flex-grow-1" id="nav-menu">
+        <ul>
+          <li><a href="#about-us">ABOUT</a></li>
+          <li><a href="#event-info">EVENT</a></li>
+          <li><a href="#all-events">ALL EVENTS</a></li>
+          <li><a href="#footer">FOOTER</a></li>
+        </ul>
+        <a href="#" class="items-center" id="language-icon">
+          <img
+            src="icon/language.png"
+            alt="Language icon"
+            width="16"
+            height="16"
+          />
+          <span>EN</span>
+        </a>
+        <a id="close-button">CLOSE</a>
+      </nav>
+    </header>
+    <main class="flex-column">
+      <section id="about-us">
+        <div class="container flex-row">
+          <img src="image/about-us.png" alt="About us" />
+          <div class="flex-grow-1 text">
+            <h1>About us</h1>
+            <p>
+              HackYourFuture is a non-profit organization dedicated to providing
+              individuals from disadvantaged backgrounds with the skills needed
+              to enter the tech industry. Our mission is to empower those who
+              face significant barriers to employment by offering them a
+              comprehensive web development education. We believe that everyone
+              deserves the opportunity to succeed, regardless of their
+              background or circumstances. Our program is designed to bridge the
+              gap between potential and opportunity, creating a pathway to
+              meaningful employment.
+            </p>
+            <p>
+              Our team consists of passionate volunteers and professional
+              developers who share a common goal: to make a lasting impact on
+              the lives of our students. By fostering a supportive and inclusive
+              learning environment, we ensure that each trainee receives the
+              guidance and encouragement needed to thrive. We take pride in
+              seeing our graduates succeed in the workforce, knowing all the
+              hard work and dedication that plays a part in their journey
+              towards a better future.
+            </p>
+            <p>
+              At HackYourFuture, diversity and inclusion are at the heart of
+              everything we do. We embrace the unique perspectives that each
+              student brings to the table, and we are committed to creating a
+              community where everyone feels valued. We create a space where
+              people enjoy being and it in up to all involved in the community
+              to bring their ideas, contributions and effort together and share
+              this with the group. Each person plays an important role in
+              shaping the HackYourFuture journey.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="event-info">
+        <h1>Event info</h1>
+        <div class="container flex-row">
+          <img src="image/event-info.png" alt="Event info" id="info-img" />
+          <div class="text">
+            <span class="flex-row items-center">
+              <img src="icon/time.png" alt="Event time" class="icon" />
+              <p class="flex-grow-1 margin-6px-10px font-event-info">12:00</p>
+            </span>
+            <span class="flex-row items-center">
+              <img src="icon/date.png" alt="Event date" class="icon" />
+              <p class="flex-grow-1 margin-6px-10px font-event-info">
+                7 October 2024
+              </p>
+            </span>
+            <span class="flex-row items-center">
+              <img src="icon/location.png" alt="Event location" class="icon" />
+              <p class="flex-grow-1 margin-6px-10px font-event-info">
+                Hovedgaden 1, Aarhus 8200
+              </p>
+            </span>
+            <h2>JavaScript Essentials</h2>
+            <p>
+              Join us for a focused workshop on JavaScript fundamentals, perfect
+              for beginners and those looking to enhance their skills. We’ll
+              cover key concepts like variables, data types, closures, and
+              asynchronous programming. This hands-on session will help you
+              apply what you learn in real-world scenarios. Whether you’re
+              building dynamic web applications or just starting out, this
+              workshop is your opportunity to boost your JavaScript skills.
+              Don’t miss out—secure your spot today and elevate your coding
+              abilities.
+            </p>
+            <button>Buy ticket</button>
+          </div>
+        </div>
+      </section>
+      <section id="all-events">
+        <h1>All events</h1>
+        <div class="container flex-row">
+          <div class="flex-column event">
+            <img src="image/event-1.png" alt="Event 1" class="event-img" />
+            <div>
+              <h2>Intro Day</h2>
+              <p>
+                Join HackYourFuture for a comprehensive program covering key
+                domains including JavaScript, HTML/CSS, Git, and more.
+              </p>
+              <span class="flex-row items-center">
+                <img src="icon/time.png" alt="Event time" class="icon" />
+                <p class="flex-grow-1 margin-6px-10px font-event-info">12:00</p>
+              </span>
+              <span class="flex-row items-center">
+                <img src="icon/date.png" alt="Event date" class="icon" />
+                <p class="flex-grow-1 margin-6px-10px font-event-info">
+                  7 October 2024
+                </p>
+              </span>
+              <span class="flex-row items-center">
+                <img
+                  src="icon/location.png"
+                  alt="Event location"
+                  class="icon"
+                />
+                <p class="flex-grow-1 margin-6px-10px font-event-info">
+                  Hovedgaden 1, Aarhus 8200
+                </p>
+              </span>
+              <button>Learn more</button>
+            </div>
+          </div>
+
+          <div class="flex-column event">
+            <img src="image/event-2.png" alt="Event 2" class="event-img" />
+            <div>
+              <h2>Intro Day</h2>
+              <p>
+                Join HackYourFuture for a comprehensive program covering key
+                domains including JavaScript, HTML/CSS, Git, and more.
+              </p>
+              <span class="flex-row items-center">
+                <img src="icon/time.png" alt="Event time" class="icon" />
+                <p class="flex-grow-1 margin-6px-10px font-event-info">12:00</p>
+              </span>
+              <span class="flex-row items-center">
+                <img src="icon/date.png" alt="Event date" class="icon" />
+                <p class="flex-grow-1 margin-6px-10px font-event-info">
+                  7 October 2024
+                </p>
+              </span>
+              <span class="flex-row items-center">
+                <img
+                  src="icon/location.png"
+                  alt="Event location"
+                  class="icon"
+                />
+                <p class="flex-grow-1 margin-6px-10px font-event-info">
+                  Hovedgaden 1, Aarhus 8200
+                </p>
+              </span>
+              <button>Learn more</button>
+            </div>
+          </div>
+
+          <div class="flex-column event">
+            <img src="image/event-3.png" alt="Event 3" class="event-img" />
+            <div>
+              <h2>Intro Day</h2>
+              <p>
+                Join HackYourFuture for a comprehensive program covering key
+                domains including JavaScript, HTML/CSS, Git, and more.
+              </p>
+              <span class="flex-row items-center">
+                <img src="icon/time.png" alt="Event time" class="icon" />
+                <p class="flex-grow-1 margin-6px-10px font-event-info">12:00</p>
+              </span>
+              <span class="flex-row items-center">
+                <img src="icon/date.png" alt="Event date" class="icon" />
+                <p class="flex-grow-1 margin-6px-10px font-event-info">
+                  7 October 2024
+                </p>
+              </span>
+              <span class="flex-row items-center">
+                <img
+                  src="icon/location.png"
+                  alt="Event location"
+                  class="icon"
+                />
+                <p class="flex-grow-1 margin-6px-10px font-event-info">
+                  Hovedgaden 1, Aarhus 8200
+                </p>
+              </span>
+              <button>Learn more</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="container flex-row">
+        <div class="flex-column">
+          <h3>MENU</h3>
+          <a href="#">About us</a>
+          <a href="#">Reviews</a>
+          <a href="#">News</a>
+          <a href="#">All events</a>
+          <a href="#">Contacts</a>
+        </div>
+        <div class="flex-column">
+          <h3>EVENTS</h3>
+          <a href="#">Innovate Conference 2024</a>
+          <a href="#">Global Health Summit</a>
+          <a href="#">Sustainable Future Expo</a>
+          <a href="#">Tech Trends Forum</a>
+          <a href="#">Creative Arts Festival</a>
+        </div>
+        <div class="flex-column">
+          <h3>ADDRESS</h3>
+          <a>Jensens Allé 45, 2. th.</a>
+          <a>2100 København Ø</a>
+          <a>Danmark</a>
+        </div>
+        <div class="flex-column">
+          <h3>CONTACTS</h3>
+          <a>eksempel@falskemail.dk</a>
+          <a>+45 12 34 56 78</a>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.989120224347!2d12.570187276521606!3d55.7065608730671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465252f71bf34eaf%3A0xf0c1006da5d00be5!2sBorgmester%20Jensens%20All%C3%A9%2045%2C%202.%20th%2C%202100%20K%C3%B8benhavn!5e0!3m2!1sen!2sdk!4v1724454390778!5m2!1sen!2sdk"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <p class="copyright">© 2024 EVENTS | All rights reserved</p>
+    </footer>
+  </body>
+
+  <script src="index.js"></script>
+</html>
