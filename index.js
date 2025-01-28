@@ -1,37 +1,41 @@
 "use strict";
 
-function showAlert() {
-  alert("Tracy is a cat person 😻!");
+function showAlert(message = "Tracy is a cat person 😻!") {
+  alert(message);
 }
 
+// Toggle nav menu when switching between Mobile and Website screen
 const toggleButton = document.getElementById("toggle-button");
 const navMenu = document.getElementById("nav-menu");
-
-toggleButton.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  toggleButton.classList.toggle("active");
-});
-
 const closeButton = document.getElementById("close-button");
-closeButton.addEventListener("click", () => {
+const toggleNavMenu = () => {
   navMenu.classList.toggle("active");
   toggleButton.classList.toggle("active");
-});
+};
 
+if (toggleButton && closeButton && navMenu) {
+  toggleButton.addEventListener("click", toggleNavMenu);
+  closeButton.addEventListener("click", toggleNavMenu);
+}
+
+// Change flex-direction when switching between Mobile and Website screen
 function onScreenResize() {
   const containers = document.querySelectorAll(".container");
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   containers.forEach((container) => {
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      container.classList.remove("flex-row");
-      container.classList.add("flex-column");
-    } else {
-      container.classList.remove("flex-column");
-      container.classList.add("flex-row");
-    }
+    container.classList.toggle("flex-row", !isMobile);
+    container.classList.toggle("flex-column", isMobile);
   });
 }
 
-// toggleFlexClasses();
+// Debounce Resize Event Listener
+function debounce(func, wait) {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
 
-window.addEventListener("resize", onScreenResize);
+window.addEventListener("resize", debounce(onScreenResize, 200));
